@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-6">
+    <a class="btn btn-link">
+      <i class="fa fa-arrow-circle-o-left">Back</i>
+    </a>
+  </div>
+  <div class="col-md-6">
+    <div class="btn-group pull-right">
+      <button [routerLink]="['edit-client/' + id]" class="btn btn-secondary">Edit</button>
+      <button class="btn btn-danger" (click)="delete()">Delete</button>
+    </div>
+  </div>
+</div>
+<br>
+<div class="card">
+  <h3 class="card-header">{{client.firstName}} {{client.lastName}}</h3>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-8">
+        <h3>Client ID: {{id}}</h3>
+      </div>
+      <div class="col-md-4">
+        <!-- BALANce -->
+      </div>
+      <div class="col-md-12">
+        <ul class="list-group">
+          <li class="list-group-item">Email: {{client.email}}</li>
+          <li class="list-group-item">Phone: {{client.phone}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
